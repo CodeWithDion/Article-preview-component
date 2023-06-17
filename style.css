@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* ||RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ||VARAIABLES */
+:root {
+
+    /* Colors */
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+/* ||GENERAL STYLE */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: "Manrope", sans-serif;
+    background: var(--Light-Grayish-Blue);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 2.1rem 2rem 1rem;
+}
+
+/* ||CONTENT */
+main {
+    max-width: 330px;
+    border-radius: .6rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.image-container {
+    width: 100%;
+    height: 204px;
+    background: url("images/drawers.jpg") no-repeat;
+    background-position: top -14px left 0;
+    background-size: 100%;
+}
+
+.review {
+    color: var(--Desaturated-Dark-Blue);
+    line-height: 1.5;
+    font-size: .84rem;
+    margin: 0 2rem 1.2rem;
+}
+
+footer {
+    position: relative;
+}
+
+.person {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2rem 1.2rem;
+}
+
+.person-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.person img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.name-date {
+    line-height: 1.6;
+}
+
+.name {
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.date {
+    color: var(--Grayish-Blue);
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn.one {
+    color: var(--Desaturated-Dark-Blue);
+    background: var(--Light-Grayish-Blue);
+}
+
+.share-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    background: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.share-link-detail {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.share-link p {
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.share-link ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn.two {
+    color: white;
+    background: var(--Desaturated-Dark-Blue);
+}
+
+/* ||MEDIA QUERIES */
+@media only screen and (min-width: 850px) {
+    main {
+        display: flex;
+        max-width: 700px;
+        overflow: unset;
+    }
+
+    .image-container {
+        width: 38%;
+        height: auto;
+        background-position: left;
+        background-size: cover;
+        border-radius: .6rem 0 0 .6rem;
+        overflow: hidden;
+    }
+
+    .testimonial {
+        width: 62%;
+    }
+
+    .person {
+        padding: .5rem 2.3rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        margin: 2.1rem 2.3rem 1rem;
+    }
+
+    .review {
+        margin: 0 2.3rem 1rem;
+    }
+
+    .share-link {
+        width: 51.5%;
+        padding: .8rem 0;
+        left: unset;
+        right: -60px;
+        top: -70px;
+        border-radius: .6rem;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    .share-link::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 12px;
+        border-style: solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+    }
+
+    .btn.two {
+        position: absolute;
+        bottom: -64px;
+        right: 97px;
+    }
+
+
+}
